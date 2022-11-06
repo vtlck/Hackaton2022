@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+
+
+{% block SignInOrOut %}
+<a class="signInSignOut" href="{% url 'authorisation' %}">Войти</a>
+{% endblock %}
+
+
+{% block content %}
+<h1>Рассчитайте стоимость государственного жилья</h1>
+<h2>Импортируйте excel файл для подбора аналогов</h2>
+<a href="{% url 'imported' %}">Импортировать</a>
+{% endblock %}
+

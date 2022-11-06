@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    </head>
+        <body>
+            <header class="site-header sticky-top py-1">
+                <nav class="container d-flex flex-column flex-md-row justify-content-between">
+                  <a class="py-2" href="#" aria-label="Product">
+                  </a>
+                  <a class="py-2 d-none d-md-inline-block" href="{% url 'history' %}">История поиска</a>
+                    {% block SignInOrOut %}
+
+                    {% endblock %}
+
+                </nav>
+            </header>
+
+            <main>
+                <div>
+                    {% block content %}{% endblock %}
+                </div>
+            </main>
+            <footer>
+                <div>
+                    <a href="{% url 'history' %}">История поиска</a>
+                </div>
+            </footer>
+
+        </body>
+</html>
